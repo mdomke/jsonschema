@@ -4,7 +4,7 @@ python:
 install:
   - pip install tox
 script:
-  - python2 setup.py --formats=gztar,zip bdist_wheel
+  - python2 setup.py --format=gztar,zip bdist_wheel
 
   - sh -c 'python2 -m pip install --force-reinstall dist/*.whl'
   - sh -c 'python2 -m pip install --force-reinstall dist/*.tar.gz'
