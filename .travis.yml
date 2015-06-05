@@ -5,3 +5,17 @@ install:
   - pip install tox
 script:
   - tox
+
+  - python2 setup.py --formats=gztar,zip bdist_wheel
+
+  - python2 -m pip install --force-reinstall dist/*.whl
+  - python2 -m pip install --force-reinstall dist/*.tar.gz
+  - python2 -m pip install --force-reinstall dist/*.zip
+
+  - pypy -m pip install --force-reinstall dist/*.whl
+  - pypy -m pip install --force-reinstall dist/*.tar.gz
+  - pypy -m pip install --force-reinstall dist/*.zip
+
+  - python3 -m pip install --force-reinstall dist/*.whl
+  - python3 -m pip install --force-reinstall dist/*.tar.gz
+  - python3 -m pip install --force-reinstall dist/*.zip
