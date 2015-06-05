@@ -6,16 +6,16 @@ install:
 script:
   - python2 setup.py --format=gztar,zip bdist_wheel
 
-  - sh -c 'python2 -m pip install --force-reinstall dist/*.whl'
-  - sh -c 'python2 -m pip install --force-reinstall dist/*.tar.gz'
-  - sh -c 'python2 -m pip install --force-reinstall dist/*.zip'
+  - bash -c 'python2 -m pip install --force-reinstall dist/*.whl'
+  - bash -c 'python2 -m pip install --force-reinstall dist/*.tar.gz'
+  - bash -c 'python2 -m pip install --force-reinstall dist/*.zip'
 
-  - sh -c 'pypy -m pip install --force-reinstall dist/*.whl'
-  - sh -c 'pypy -m pip install --force-reinstall dist/*.tar.gz'
-  - sh -c 'pypy -m pip install --force-reinstall dist/*.zip'
+  - bash -c 'pypy -m pip install --force-reinstall dist/*.whl'
+  - bash -c 'pypy -m pip install --force-reinstall dist/*.tar.gz'
+  - bash -c 'pypy -m pip install --force-reinstall dist/*.zip'
 
-  - sh -c 'python3 -m pip install --force-reinstall dist/*.whl'
-  - sh -c 'python3 -m pip install --force-reinstall dist/*.tar.gz'
-  - sh -c 'python3 -m pip install --force-reinstall dist/*.zip'
+  - bash -c 'python3 -m pip install --force-reinstall dist/*.whl'
+  - bash -c 'python3 -m pip install --force-reinstall dist/*.tar.gz'
+  - bash -c 'python3 -m pip install --force-reinstall dist/*.zip'
 
   - tox
